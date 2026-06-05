@@ -2,7 +2,13 @@
   "mcpServers": {
     "context7": {
       "command": "npx",
-      "args": ["-y", "@context7/mcp-server"]
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {
+        "Context7": "ctx7sk-a8898eff-91f0-49d4-a241-2bb75250b74d"
+      }
     },
 
     "playwright": {

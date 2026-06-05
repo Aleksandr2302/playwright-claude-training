@@ -5,8 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
+    "test:ui": "npx playwright test tests/ui/",
     "test:headed": "npx playwright test --headed",
-    "test:report": "npx playwright show-report"
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:webkit": "npx playwright test --project=webkit",
+    "test:debug": "npx playwright test --debug",
+    "test:ci": "npx playwright test --reporter=dot",
+    "report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
