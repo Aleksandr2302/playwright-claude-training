@@ -1,0 +1,11 @@
+[      17ms] [ERROR] ERROR C: NG04002: 'auth/login'
+    at Eg.noMatchError (https://v2.practicesoftwaretesting.com/main-4OPD7CFJ.js:8:57447)
+    at https://v2.practicesoftwaretesting.com/main-4OPD7CFJ.js:8:58186
+    at https://v2.practicesoftwaretesting.com/main-4OPD7CFJ.js:3:21022
+    at $d._error (https://v2.practicesoftwaretesting.com/main-4OPD7CFJ.js:3:5484)
+    at $d.error (https://v2.practicesoftwaretesting.com/main-4OPD7CFJ.js:3:2589)
+    at $d._error (https://v2.practicesoftwaretesting.com/main-4OPD7CFJ.js:3:2829)
+    at $d.error (https://v2.practicesoftwaretesting.com/main-4OPD7CFJ.js:3:2589)
+    at $d._error (https://v2.practicesoftwaretesting.com/main-4OPD7CFJ.js:3:2829)
+    at $d.error (https://v2.practicesoftwaretesting.com/main-4OPD7CFJ.js:3:2589)
+    at $d._error (https://v2.practicesoftwaretesting.com/main-4OPD7CFJ.js:3:2829) @ https://v2.practicesoftwaretesting.com/main-4OPD7CFJ.js:6

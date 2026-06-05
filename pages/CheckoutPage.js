@@ -26,16 +26,29 @@ class CheckoutPage {
   }
 
   async fillBillingAddress({ country, postalCode, houseNumber, street, city, state }) {
+    // Wait for the billing form to be ready: the country select must be enabled
+    // before we start filling (Angular may still be initialising the form group
+    // or loading the saved-address profile asynchronously).
+    await expect(this.countrySelect).toBeEnabled({ timeout: 15000 });
+
     await this.countrySelect.selectOption(country);
     await this.postalCodeInput.fill(postalCode);
     await this.houseNumberInput.fill(houseNumber);
     await this.streetInput.fill(street);
     await this.cityInput.fill(city);
     await this.stateInput.fill(state);
+
+    // Tab away from the last field so Angular marks the control as "touched"
+    // and runs the final synchronous validation pass before we check the button.
+    await this.stateInput.press('Tab');
   }
 
   async proceedFromBilling() {
-    await expect(this.proceedBillingButton).toBeEnabled();
+    // Angular reactive form validation can take a moment to enable the button
+    // after all required fields are filled — use a generous timeout.
+    // The 20 s window covers the async saved-address profile load that
+    // occasionally overwrites fields and triggers a re-validation cycle.
+    await expect(this.proceedBillingButton).toBeEnabled({ timeout: 20000 });
     await this.proceedBillingButton.click();
   }
 

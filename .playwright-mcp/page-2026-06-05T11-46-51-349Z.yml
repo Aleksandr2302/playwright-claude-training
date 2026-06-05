@@ -1,0 +1,63 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - text: View the
+    - link "Documentation" [ref=e4] [cursor=pointer]:
+      - /url: https://testsmith-io.github.io/practice-software-testing/#/
+    - text: for this application.
+  - navigation [ref=e6]:
+    - generic [ref=e7]:
+      - link "Practice Software Testing - Toolshop" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img [ref=e9]
+      - list [ref=e28]:
+        - listitem [ref=e29]:
+          - link "Home" [ref=e30] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e31]:
+          - button "Categories" [ref=e32] [cursor=pointer]
+        - listitem [ref=e33]:
+          - link "Contact" [ref=e34] [cursor=pointer]:
+            - /url: "#/contact"
+  - generic [ref=e70]:
+    - 'heading "Category: Rentals" [level=2] [ref=e72]'
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - heading " Sort" [level=4] [ref=e75]:
+          - generic [ref=e76]: 
+          - text: Sort
+        - separator [ref=e77]
+        - combobox [ref=e80]:
+          - option [selected]
+          - option "Name (A - Z)"
+          - option "Name (Z - A)"
+          - option "Price (High - Low)"
+          - option "Price (Low - High)"
+        - heading " Filters" [level=4] [ref=e81]:
+          - generic [ref=e82]: 
+          - text: Filters
+        - separator [ref=e83]
+        - heading "By category:" [level=4] [ref=e84]
+        - heading "By brand:" [level=4] [ref=e86]
+        - generic [ref=e88]:
+          - checkbox "Brand name 1" [ref=e89]
+          - text: Brand name 1
+        - generic [ref=e91]:
+          - checkbox "Brand name 2" [ref=e92]
+          - text: Brand name 2
+      - generic [ref=e93]:
+        - text: 
+        - generic:
+          - generic:
+            - generic:
+              - navigation "Pagination"
+  - paragraph [ref=e66]:
+    - text: This is a DEMO application (
+    - link "GitHub repo" [ref=e67] [cursor=pointer]:
+      - /url: https://github.com/testsmith-io/practice-software-testing
+    - text: ), used for software testing training purpose. | Banner photo by
+    - link "Barn Images" [ref=e68] [cursor=pointer]:
+      - /url: https://unsplash.com/@barnimages
+    - text: "on"
+    - link "Unsplash" [ref=e69] [cursor=pointer]:
+      - /url: https://unsplash.com/photos/t5YUoHW6zRo
+    - text: .

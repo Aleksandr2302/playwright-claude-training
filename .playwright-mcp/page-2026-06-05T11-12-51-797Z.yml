@@ -1,0 +1,146 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - text: View the
+      - link "Documentation" [ref=e4] [cursor=pointer]:
+        - /url: https://testsmith-io.github.io/practice-software-testing/#/
+      - text: for this application.
+    - generic [ref=e5]:
+      - generic [ref=e7]:
+        - generic [ref=e8]: Practice Black Box Testing & Bug Hunting
+        - button "Testing Guide" [ref=e9] [cursor=pointer]
+        - button "🐛 Bug Hunting" [ref=e10] [cursor=pointer]
+      - navigation [ref=e11]:
+        - generic [ref=e12]:
+          - link "Practice Software Testing - Toolshop" [ref=e13] [cursor=pointer]:
+            - /url: /
+            - img [ref=e14]
+          - generic [ref=e32]:
+            - menubar "Main menu" [ref=e33]:
+              - menuitem "Home" [ref=e34]:
+                - link "Home" [ref=e35] [cursor=pointer]:
+                  - /url: /
+              - menuitem "Categories" [ref=e36]:
+                - button "Categories" [ref=e37] [cursor=pointer]
+              - menuitem "Contact" [ref=e38]:
+                - link "Contact" [ref=e39] [cursor=pointer]:
+                  - /url: /contact
+              - menuitem "Jane Doe" [ref=e56]:
+                - button "Jane Doe" [ref=e57] [cursor=pointer]
+              - menuitem "cart" [ref=e173]:
+                - link "cart" [ref=e174] [cursor=pointer]:
+                  - /url: /checkout
+                  - img [ref=e176]
+                  - generic [ref=e178]: "1"
+            - button "Select language" [ref=e41] [cursor=pointer]:
+              - img [ref=e43]
+              - text: EN
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - figure "Photo by Zac Edmonds on Unsplash." [ref=e89]:
+          - img "Bulldozer" [ref=e91]
+          - generic [ref=e92]:
+            - text: Photo by
+            - link "Zac Edmonds" [ref=e93] [cursor=pointer]:
+              - /url: https://unsplash.com/@zacedmo
+            - text: "on"
+            - link "Unsplash" [ref=e94] [cursor=pointer]:
+              - /url: https://unsplash.com/photos/N1LBcqLP9ec
+            - text: .
+        - generic [ref=e95]:
+          - heading "Bulldozer" [level=1] [ref=e96]
+          - paragraph [ref=e97]:
+            - generic "category" [ref=e98]: Drill
+            - generic "brand" [ref=e99]: ForgeFlex Tools
+          - generic [ref=e100]:
+            - generic [ref=e101]: $147.50
+            - text: per hour
+            - generic [ref=e102]: / (Total $147.50)
+          - generic "A = most environmentally friendly, E = higher environmental impact" [ref=e103]:
+            - text: "CO₂:"
+            - generic [ref=e104]: A
+            - generic [ref=e105]: B
+            - generic [ref=e106]: C
+            - generic [ref=e107]: D
+            - generic [ref=e108]: E
+          - paragraph [ref=e109]: Robust tracked bulldozer available for hourly rental, built for heavy-duty grading, site clearing, land leveling, and large-volume earthmoving operations on construction and infrastructure projects. The wide-blade dozer pushes enormous volumes of soil, sand, gravel, and debris with ease, while the optional rear-mounted ripper attachment fractures compacted ground, asphalt, and embedded tree roots ahead of the blade pass. Ergonomic joystick cab controls and a fully automatic hydrostatic transmission allow operators of all experience levels to work efficiently and precisely from the first hour of rental. The enclosed cab features climate control, a suspension seat, and panoramic visibility for comfortable, fatigue-free operation during extended shifts. Integrated GPS rough-grading guidance is available as an optional add-on for projects requiring precise elevation control. Ideal for subdivision site preparation, road subgrade construction, agricultural land reclamation, and large-scale commercial landscaping projects.
+          - generic [ref=e110]:
+            - generic [ref=e111]: Duration (1 hour(s))
+            - generic "ngx-slider" [ref=e112]:
+              - slider "ngx-slider" [ref=e115] [cursor=pointer]
+              - generic [ref=e116]: "1"
+              - generic [ref=e117]: "10"
+              - generic [ref=e118]: "1"
+          - generic [ref=e119]:
+            - button "Add to cart" [active] [ref=e120] [cursor=pointer]:
+              - img [ref=e122]
+              - text: Add to cart
+            - button "Add to favourites" [ref=e124] [cursor=pointer]:
+              - img [ref=e126]
+              - text: Add to favourites
+            - button "Compare" [ref=e128] [cursor=pointer]:
+              - img [ref=e130]
+              - text: Compare
+      - separator [ref=e132]
+      - generic [ref=e133]:
+        - heading "Related products" [level=2] [ref=e134]
+        - generic [ref=e136]:
+          - link "Cordless Drill 20V Cordless Drill 20V More information" [ref=e137] [cursor=pointer]:
+            - /url: /product/01KTBQ1XC98MT50Z6SD2FFQS70
+            - img "Cordless Drill 20V" [ref=e139]
+            - generic [ref=e140]:
+              - heading "Cordless Drill 20V" [level=5] [ref=e141]
+              - link "More information" [ref=e142]:
+                - /url: "#"
+          - link "Cordless Drill 24V Cordless Drill 24V More information" [ref=e143] [cursor=pointer]:
+            - /url: /product/01KTBQ1XCBFKK2FZ67WE8RSBFB
+            - img "Cordless Drill 24V" [ref=e145]
+            - generic [ref=e146]:
+              - heading "Cordless Drill 24V" [level=5] [ref=e147]
+              - link "More information" [ref=e148]:
+                - /url: "#"
+          - link "Cordless Drill 18V Cordless Drill 18V More information" [ref=e149] [cursor=pointer]:
+            - /url: /product/01KTBQ1XCDWHPMV3XAV6CZ572G
+            - img "Cordless Drill 18V" [ref=e151]
+            - generic [ref=e152]:
+              - heading "Cordless Drill 18V" [level=5] [ref=e153]
+              - link "More information" [ref=e154]:
+                - /url: "#"
+          - link "Excavator Excavator More information" [ref=e155] [cursor=pointer]:
+            - /url: /product/01KTBQ1XCMBR1HD8DWF6X2D2WQ
+            - img "Excavator" [ref=e157]
+            - generic [ref=e158]:
+              - heading "Excavator" [level=5] [ref=e159]
+              - link "More information" [ref=e160]:
+                - /url: "#"
+          - link "Cordless Drill 12V Cordless Drill 12V More information" [ref=e161] [cursor=pointer]:
+            - /url: /product/01KTBQ1XCGFS77ZZVBHC7YB0JT
+            - img "Cordless Drill 12V" [ref=e163]
+            - generic [ref=e164]:
+              - heading "Cordless Drill 12V" [level=5] [ref=e165]
+              - link "More information" [ref=e166]:
+                - /url: "#"
+          - link "Crane Crane More information" [ref=e167] [cursor=pointer]:
+            - /url: /product/01KTBQ1XCVFWCF2CKQC4FNKNS1
+            - img "Crane" [ref=e169]
+            - generic [ref=e170]:
+              - heading "Crane" [level=5] [ref=e171]
+              - link "More information" [ref=e172]:
+                - /url: "#"
+    - paragraph [ref=e47]:
+      - text: This is a DEMO application (
+      - link "GitHub repo" [ref=e48] [cursor=pointer]:
+        - /url: https://github.com/testsmith-io/practice-software-testing
+      - text: ), used for software testing training purpose. |
+      - link "Privacy Policy" [ref=e49] [cursor=pointer]:
+        - /url: /privacy
+      - text: "| Banner photo by"
+      - link "Barn Images" [ref=e50] [cursor=pointer]:
+        - /url: https://unsplash.com/@barnimages
+      - text: "on"
+      - link "Unsplash" [ref=e51] [cursor=pointer]:
+        - /url: https://unsplash.com/photos/t5YUoHW6zRo
+      - text: .
+    - button "Open chat" [ref=e53] [cursor=pointer]:
+      - img [ref=e54]
+  - alert "Product added to shopping cart." [ref=e180]

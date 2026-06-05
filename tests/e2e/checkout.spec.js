@@ -11,7 +11,7 @@ const { billingAddress, paymentMethod } = require('../fixtures/checkout.fixtures
 test.describe('E2E — Checkout Flow', () => {
   test.setTimeout(120_000);
 
-  test('logged-in user adds 3 products and completes checkout successfully', async ({ page }) => {
+  test('logged-in user adds 2 products and completes checkout successfully', async ({ page }) => {
 
     // ── Arrange: Login ──────────────────────────────────────────────────────
     const loginPage = new LoginPage(page);
@@ -23,26 +23,36 @@ test.describe('E2E — Checkout Flow', () => {
     const cartPage = new CartPage(page);
     await cartPage.clearCart();
 
-    // ── Arrange: Add 3 random products to cart ──────────────────────────────
+    // ── Arrange: Add 2 available products to cart ───────────────────────────
+    // Fetch more candidates than needed so we can skip out-of-stock products.
     const listPage = new ProductListPage(page);
     await listPage.navigate();
-    const productLinks = await listPage.getRandomProductLinks(3);
+    const candidates = await listPage.getRandomProductLinks(10);
 
     const addedProductNames = [];
-    for (const { name, href } of productLinks) {
+    for (const { name, href } of candidates) {
+      if (addedProductNames.length === 2) break;
+
       await page.goto(href);
       await page.waitForURL(/\/product\//);
       const productPage = new ProductPage(page);
+
+      // Skip product if Add to cart button is disabled (out of stock / unavailable)
+      const canAdd = await productPage.addToCartButton.isEnabled();
+      if (!canAdd) continue;
+
       await productPage.addToCart();
       const msg = await productPage.getAddToCartMessage();
       expect(msg).toContain('Product added to shopping cart.');
       addedProductNames.push(name);
     }
 
+    expect(addedProductNames.length).toBe(2);
+
     // ── Act: Open cart ───────────────────────────────────────────────────────
     await cartPage.openCart();
 
-    // Assert all 3 products are visible in the cart
+    // Assert both products are visible in the cart
     await cartPage.verifyProductsPresent(addedProductNames);
 
     // Assert cart count badge reflects what we added

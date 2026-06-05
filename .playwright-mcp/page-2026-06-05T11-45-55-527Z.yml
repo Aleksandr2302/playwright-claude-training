@@ -1,0 +1,67 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - text: View the
+    - link "Documentation" [ref=e4] [cursor=pointer]:
+      - /url: https://testsmith-io.github.io/practice-software-testing/#/
+    - text: for this application.
+  - navigation [ref=e6]:
+    - generic [ref=e7]:
+      - link "Practice Software Testing - Toolshop" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img [ref=e9]
+      - list [ref=e28]:
+        - listitem [ref=e29]:
+          - link "Home" [ref=e30] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e31]:
+          - button "Categories" [ref=e32] [cursor=pointer]
+        - listitem [ref=e33]:
+          - link "Contact" [ref=e34] [cursor=pointer]:
+            - /url: "#/contact"
+  - generic [ref=e36]:
+    - generic [ref=e37]:
+      - paragraph [ref=e38]:
+        - img [ref=e39]
+      - separator [ref=e40]
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - heading " Sort" [level=4] [ref=e43]:
+          - generic [ref=e44]: 
+          - text: Sort
+        - separator [ref=e45]
+        - combobox [ref=e48]:
+          - option [selected]
+          - option "Name (A - Z)"
+          - option "Name (Z - A)"
+          - option "Price (High - Low)"
+          - option "Price (Low - High)"
+        - heading " Search" [level=4] [ref=e49]:
+          - generic [ref=e50]: 
+          - text: Search
+        - separator [ref=e51]
+        - generic [ref=e53]:
+          - textbox [ref=e54]
+          - button "Search" [ref=e56] [cursor=pointer]
+        - heading " Filters" [level=4] [ref=e57]:
+          - generic [ref=e58]: 
+          - text: Filters
+        - separator [ref=e59]
+        - heading "By category:" [level=4] [ref=e60]
+        - heading "By brand:" [level=4] [ref=e62]
+      - generic [ref=e63]:
+        - text: 
+        - generic:
+          - generic:
+            - generic:
+              - navigation "Pagination"
+  - paragraph [ref=e66]:
+    - text: This is a DEMO application (
+    - link "GitHub repo" [ref=e67] [cursor=pointer]:
+      - /url: https://github.com/testsmith-io/practice-software-testing
+    - text: ), used for software testing training purpose. | Banner photo by
+    - link "Barn Images" [ref=e68] [cursor=pointer]:
+      - /url: https://unsplash.com/@barnimages
+    - text: "on"
+    - link "Unsplash" [ref=e69] [cursor=pointer]:
+      - /url: https://unsplash.com/photos/t5YUoHW6zRo
+    - text: .
