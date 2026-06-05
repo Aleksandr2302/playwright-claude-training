@@ -1,0 +1,8 @@
+[     341ms] [LOG] Initializing Google Analytics 4: G-0BJFXRKTYC @ https://practicesoftwaretesting.com/chunk-R3CBPJQR.js:0
+[     947ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ https://api.practicesoftwaretesting.com/users/me:0
+[     953ms] [ERROR] ERROR {message: Unauthorized} @ https://practicesoftwaretesting.com/chunk-TKC3W22G.js:6
+[    1075ms] [LOG] Google Analytics 4 ready for tracking @ https://practicesoftwaretesting.com/chunk-R3CBPJQR.js:0
+[    1255ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ https://api.practicesoftwaretesting.com/users/me:0
+[    4260ms] [WARNING] The resource https://practicesoftwaretesting.com/assets/img/barn-2400x1600.avif was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://practicesoftwaretesting.com/product/01KTBG67J9BHY0T4EW251SMCGW:0
+[    9217ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ https://api.practicesoftwaretesting.com/favorites:0
+[   12248ms] [WARNING] The resource https://practicesoftwaretesting.com/assets/img/barn-2400x1600.avif was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://practicesoftwaretesting.com/product/01KTBG67J9BHY0T4EW251SMCGW:0

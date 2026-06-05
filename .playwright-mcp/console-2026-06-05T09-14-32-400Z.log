@@ -1,0 +1,3 @@
+[    5732ms] [LOG] Initializing Google Analytics 4: G-0BJFXRKTYC @ https://practicesoftwaretesting.com/chunk-R3CBPJQR.js:0
+[    5787ms] [LOG] Google Analytics 4 ready for tracking @ https://practicesoftwaretesting.com/chunk-R3CBPJQR.js:0
+[   18562ms] [ERROR] Failed to load resource: the server responded with a status of 409 (Conflict) @ https://api.practicesoftwaretesting.com/favorites:0

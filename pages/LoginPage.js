@@ -30,6 +30,11 @@ class LoginPage {
     await expect(this.navMenu).toBeVisible();
     await expect(this.pageTitle).toHaveText('My account');
   }
+
+  async getLoginSuccessState() {
+    await expect(this.page).toHaveURL(/\/account/);
+    await expect(this.navMenu).toBeVisible();
+  }
 }
 
 module.exports = { LoginPage };

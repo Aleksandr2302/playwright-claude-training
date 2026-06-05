@@ -1,0 +1,5 @@
+[     263ms] [LOG] Initializing Google Analytics 4: G-0BJFXRKTYC @ https://practicesoftwaretesting.com/chunk-R3CBPJQR.js:0
+[     301ms] [LOG] Google Analytics 4 ready for tracking @ https://practicesoftwaretesting.com/chunk-R3CBPJQR.js:0
+[    4526ms] [WARNING] The resource https://practicesoftwaretesting.com/assets/img/barn-2400x1600.avif was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://practicesoftwaretesting.com/product/01KTBG67J9BHY0T4EW251SMCGW:0
+[    5238ms] [ERROR] Failed to load resource: the server responded with a status of 409 (Conflict) @ https://api.practicesoftwaretesting.com/favorites:0
+[    9320ms] [WARNING] The resource https://practicesoftwaretesting.com/assets/img/barn-2400x1600.avif was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://practicesoftwaretesting.com/product/01KTBG67J9BHY0T4EW251SMCGW:0

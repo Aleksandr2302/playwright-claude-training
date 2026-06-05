@@ -1,0 +1,141 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - text: View the
+    - link "Documentation" [ref=e4] [cursor=pointer]:
+      - /url: https://testsmith-io.github.io/practice-software-testing/#/
+    - text: for this application.
+  - generic [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: Practice Black Box Testing & Bug Hunting
+      - button "Testing Guide" [ref=e9] [cursor=pointer]
+      - button "🐛 Bug Hunting" [ref=e10] [cursor=pointer]
+    - navigation [ref=e11]:
+      - generic [ref=e12]:
+        - link "Practice Software Testing - Toolshop" [ref=e13] [cursor=pointer]:
+          - /url: /
+          - img [ref=e14]
+        - generic [ref=e32]:
+          - menubar "Main menu" [ref=e33]:
+            - menuitem "Home" [ref=e34]:
+              - link "Home" [ref=e35] [cursor=pointer]:
+                - /url: /
+            - menuitem "Categories" [ref=e36]:
+              - button "Categories" [ref=e37] [cursor=pointer]
+            - menuitem "Contact" [ref=e38]:
+              - link "Contact" [ref=e39] [cursor=pointer]:
+                - /url: /contact
+            - menuitem "Jane Doe" [ref=e61]:
+              - button "Jane Doe" [ref=e62] [cursor=pointer]
+          - button "Select language" [ref=e41] [cursor=pointer]:
+            - img [ref=e43]
+            - text: EN
+  - generic [ref=e46]:
+    - generic [ref=e63]:
+      - figure "Photo by Helinton Fantin on Unsplash." [ref=e65]:
+        - img "Combination Pliers" [ref=e67]
+        - generic [ref=e68]:
+          - text: Photo by
+          - link "Helinton Fantin" [ref=e69] [cursor=pointer]:
+            - /url: https://unsplash.com/@fantin
+          - text: "on"
+          - link "Unsplash" [ref=e70] [cursor=pointer]:
+            - /url: https://unsplash.com/photos/W8BNwvOvW4M
+          - text: .
+      - generic [ref=e71]:
+        - heading "Combination Pliers" [level=1] [ref=e72]
+        - paragraph [ref=e73]:
+          - generic "category" [ref=e74]: Pliers
+          - generic "brand" [ref=e75]: ForgeFlex Tools
+        - generic [ref=e77]: $14.15
+        - generic "A = most environmentally friendly, E = higher environmental impact" [ref=e78]:
+          - text: "CO₂:"
+          - generic [ref=e79]: A
+          - generic [ref=e80]: B
+          - generic [ref=e81]: C
+          - generic [ref=e82]: D
+          - generic [ref=e83]: E
+        - paragraph [ref=e84]: Versatile combination pliers designed for gripping, bending, and cutting wire with ease. Featuring chrome vanadium steel construction with induction-hardened cutting edges, these pliers deliver excellent grip and leverage for a wide range of tasks. The precision-machined jaws combine flat gripping surfaces with a pipe-grip section and integrated wire cutter for true multi-purpose functionality. Ergonomic bi-component handles reduce hand fatigue during extended use and provide a secure hold even with oily or gloved hands. The joint is precisely fitted to eliminate play and ensure smooth operation over thousands of cycles. Ideal for electricians, mechanics, and DIY enthusiasts tackling everyday projects around the workshop or job site.
+        - generic [ref=e85]:
+          - button "Decrease quantity" [ref=e86] [cursor=pointer]:
+            - img [ref=e88]
+          - generic [ref=e90]: Quantity
+          - spinbutton "Quantity" [ref=e91]: "1"
+          - button "Increase quantity" [ref=e92] [cursor=pointer]:
+            - img [ref=e94]
+        - generic [ref=e96]:
+          - button "Add to cart" [ref=e97] [cursor=pointer]:
+            - img [ref=e99]
+            - text: Add to cart
+          - button "Add to favourites" [ref=e101] [cursor=pointer]:
+            - img [ref=e103]
+            - text: Add to favourites
+          - button "Compare" [active] [ref=e105] [cursor=pointer]:
+            - img [ref=e107]
+            - text: Compare
+    - generic [ref=e110]:
+      - heading "Specifications" [level=3] [ref=e111]
+      - table [ref=e112]:
+        - rowgroup [ref=e113]:
+          - row "Handle Material Bi-component" [ref=e114]:
+            - cell "Handle Material" [ref=e115]
+            - cell "Bi-component" [ref=e116]
+          - row "Length 200mm" [ref=e117]:
+            - cell "Length" [ref=e118]
+            - cell "200mm" [ref=e119]
+          - row "Material Chrome Vanadium Steel" [ref=e120]:
+            - cell "Material" [ref=e121]
+            - cell "Chrome Vanadium Steel" [ref=e122]
+          - row "Warranty 2years" [ref=e123]:
+            - cell "Warranty" [ref=e124]
+            - cell "2years" [ref=e125]
+          - row "Weight 340g" [ref=e126]:
+            - cell "Weight" [ref=e127]
+            - cell "340g" [ref=e128]
+    - separator [ref=e47]
+    - generic [ref=e48]:
+      - heading "Related products" [level=2] [ref=e49]
+      - generic [ref=e130]:
+        - link "Pliers Pliers More information" [ref=e131] [cursor=pointer]:
+          - /url: /product/01KTBG67JE705E101K2FDBH8D6
+          - img "Pliers" [ref=e133]
+          - generic [ref=e134]:
+            - heading "Pliers" [level=5] [ref=e135]
+            - link "More information" [ref=e136]:
+              - /url: "#"
+        - link "Bolt Cutters Bolt Cutters More information" [ref=e137] [cursor=pointer]:
+          - /url: /product/01KTBG67JHMW2BGWWAXVG1J3SY
+          - img "Bolt Cutters" [ref=e139]
+          - generic [ref=e140]:
+            - heading "Bolt Cutters" [level=5] [ref=e141]
+            - link "More information" [ref=e142]:
+              - /url: "#"
+        - link "Long Nose Pliers Long Nose Pliers More information" [ref=e143] [cursor=pointer]:
+          - /url: /product/01KTBG67JMPRYYC98MGWT2979E
+          - img "Long Nose Pliers" [ref=e145]
+          - generic [ref=e146]:
+            - heading "Long Nose Pliers" [level=5] [ref=e147]
+            - link "More information" [ref=e148]:
+              - /url: "#"
+        - link "Slip Joint Pliers Slip Joint Pliers More information" [ref=e149] [cursor=pointer]:
+          - /url: /product/01KTBG67JQ42BYK34YK310G6PW
+          - img "Slip Joint Pliers" [ref=e151]
+          - generic [ref=e152]:
+            - heading "Slip Joint Pliers" [level=5] [ref=e153]
+            - link "More information" [ref=e154]:
+              - /url: "#"
+  - paragraph [ref=e52]:
+    - text: This is a DEMO application (
+    - link "GitHub repo" [ref=e53] [cursor=pointer]:
+      - /url: https://github.com/testsmith-io/practice-software-testing
+    - text: ), used for software testing training purpose. |
+    - link "Privacy Policy" [ref=e54] [cursor=pointer]:
+      - /url: /privacy
+    - text: "| Banner photo by"
+    - link "Barn Images" [ref=e55] [cursor=pointer]:
+      - /url: https://unsplash.com/@barnimages
+    - text: "on"
+    - link "Unsplash" [ref=e56] [cursor=pointer]:
+      - /url: https://unsplash.com/photos/t5YUoHW6zRo
+    - text: .
+  - button "Open chat" [ref=e58] [cursor=pointer]:
+    - img [ref=e59]
