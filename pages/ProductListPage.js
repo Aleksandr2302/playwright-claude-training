@@ -34,6 +34,28 @@ class ProductListPage {
   }
 
   /**
+   * Returns count unique random { name, href } pairs without navigating away.
+   * Used by multi-product flows to collect links before visiting each product page.
+   */
+  async getRandomProductLinks(count) {
+    const total = await this.productCards.count();
+    expect(total).toBeGreaterThan(0);
+
+    const indices = Array.from({ length: total }, (_, i) => i)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, count);
+
+    const links = [];
+    for (const idx of indices) {
+      const card = this.productCards.nth(idx);
+      const name = (await card.getByTestId('product-name').textContent()).trim();
+      const href = await card.getAttribute('href');
+      links.push({ name, href });
+    }
+    return links;
+  }
+
+  /**
    * Selects a random product whose "Increase quantity" button is enabled.
    * Iterates through shuffled product indices until a suitable one is found.
    */
