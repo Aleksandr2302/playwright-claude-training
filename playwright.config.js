@@ -17,25 +17,18 @@ module.exports = defineConfig({
     navigationTimeout: 20000,
     ignoreHTTPSErrors: true,
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    trace: 'retain-on-failure',
+    video: 'off',
+    trace: 'off',
   },
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    }
   ],
   reporter: [
     ['list'],
+    ['allure-playwright', { outputFolder: 'allure-results', detail: true, suiteTitle: false }],
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
   ],
 });

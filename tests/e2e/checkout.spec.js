@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { allure } = require('allure-playwright');
 const { LoginPage }            = require('../../pages/LoginPage');
 const { ProductListPage }      = require('../../pages/ProductListPage');
 const { ProductPage }          = require('../../pages/ProductPage');
@@ -10,6 +11,11 @@ const { billingAddress, paymentMethod } = require('../fixtures/checkout.fixtures
 
 test.describe('E2E — Checkout Flow', () => {
   test.setTimeout(120_000);
+
+  test.beforeEach(async () => {
+    await allure.epic('UI Tests');
+    await allure.label('layer', 'ui');
+  });
 
   test('logged-in user adds 2 products and completes checkout successfully', async ({ page }) => {
 
@@ -67,7 +73,12 @@ test.describe('E2E — Checkout Flow', () => {
     await checkoutPage.proceedAsLoggedIn();
 
     // ── Act: Checkout Step 3 — Billing Address ──────────────────────────────
+    // customer2 has a saved address that Angular async-loads on form init and
+    // overwrites any fields we fill too early. Wait for the pre-fill to settle
+    // (street populated) before we fill our own values on top.
+    await expect(page.locator('[data-test="street"]')).not.toBeEmpty({ timeout: 15000 });
     await checkoutPage.fillBillingAddress(billingAddress);
+    await checkoutPage.isHouseNumAndPostCodeFilled();
     await checkoutPage.proceedFromBilling();
 
     // ── Act: Checkout Step 4 — Payment ──────────────────────────────────────

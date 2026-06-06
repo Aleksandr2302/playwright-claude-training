@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { allure } = require('allure-playwright');
 const { ProductFiltersPage } = require('../../pages/ProductFiltersPage');
 
 test.describe('Product listing — sort order', () => {
@@ -9,6 +10,8 @@ test.describe('Product listing — sort order', () => {
   let filtersPage;
 
   test.beforeEach(async ({ page }) => {
+    await allure.epic('UI Tests');
+    await allure.label('layer', 'ui');
     filtersPage = new ProductFiltersPage(page);
     await filtersPage.navigate();
     await filtersPage.waitForProductsToLoad();

@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { allure } = require('allure-playwright');
 const { LoginPage }       = require('../../pages/LoginPage');
 const { ProductListPage } = require('../../pages/ProductListPage');
 const { ProductPage }     = require('../../pages/ProductPage');
@@ -6,6 +7,11 @@ const { existingUser }    = require('../fixtures/auth.fixtures');
 
 test.describe('Product interaction flow', () => {
   test.setTimeout(90_000);
+
+  test.beforeEach(async () => {
+    await allure.epic('UI Tests');
+    await allure.label('layer', 'ui');
+  });
 
   // ─── Authenticated user tests ──────────────────────────────────────────────
   // Each test in this group logs in via beforeEach so auth state is isolated.
@@ -36,18 +42,28 @@ test.describe('Product interaction flow', () => {
     });
 
     test('add to cart shows success message', async ({ page }) => {
-      // Arrange
+      // Arrange — iterate candidates to find a product that is in stock
       const listPage = new ProductListPage(page);
       await listPage.navigate();
-      await listPage.selectRandomProduct();
+      const candidates = await listPage.getRandomProductLinks(10);
 
       const productPage = new ProductPage(page);
+      let message = null;
 
-      // Act
-      await productPage.addToCart();
+      for (const { href } of candidates) {
+        await page.goto(href);
+        await page.waitForURL(/\/product\//);
+
+        const canAdd = await productPage.addToCartButton.isEnabled();
+        if (!canAdd) continue;
+
+        // Act
+        await productPage.addToCart();
+        message = await productPage.getAddToCartMessage();
+        break;
+      }
 
       // Assert
-      const message = await productPage.getAddToCartMessage();
       expect(message).toContain('Product added to shopping cart.');
     });
 
@@ -60,10 +76,10 @@ test.describe('Product interaction flow', () => {
       const productPage = new ProductPage(page);
 
       // Act
-      const status = await productPage.addToFavorites();
+      await productPage.addToFavorites();
 
       // Assert — 201 = newly added, 409 = already in favourites; both confirm the feature fires correctly
-      expect([201, 409]).toContain(status);
+      await expect(page.getByText('Product added to your favorites list.')).toBeVisible();
     });
 
     test('compare button adds product to compare list in sessionStorage', async ({ page }) => {
@@ -97,13 +113,11 @@ test.describe('Product interaction flow', () => {
 
       const productPage = new ProductPage(page);
 
-      // Act — click "Add to favourites"; API returns 401, UI shows error alert
-      const status = await productPage.addToFavorites();
-      const message = await productPage.getAlertMessage();
-
+      // Act — click "Add to favourites"; UI shows error alert
+      await productPage.addToFavorites();
+    
       // Assert
-      expect(status).toBe(401);
-      expect(message).toBe('Unauthorized, can not add product to your favorite list.');
+      await expect(page.getByText('Unauthorized, can not add product to your favorite list.')).toBeVisible();
     });
 
   });

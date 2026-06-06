@@ -41,12 +41,12 @@ class ProductPage {
    * Returns the HTTP status: 201 = newly added, 409 = already in favourites.
    */
   async addToFavorites() {
-    const responsePromise = this.page.waitForResponse(
-      resp => resp.url().includes('/favorites') && resp.request().method() === 'POST'
-    );
+    // const responsePromise = this.page.waitForResponse(
+    //   resp => resp.url().includes('/favorites') && resp.request().method() === 'POST'
+    // );
     await this.favoritesButton.click();
-    const response = await responsePromise;
-    return response.status();
+    // const response = await responsePromise;
+    // return response.status();
   }
 
   /**

@@ -17,7 +17,7 @@ const user = {
 
 // Pre-existing account available on the demo site for standalone login tests
 const existingUser = {
-  email: 'customer@practicesoftwaretesting.com',
+  email: 'customer2@practicesoftwaretesting.com',
   password: 'welcome01',
 };
 

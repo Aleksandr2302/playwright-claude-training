@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { allure } = require('allure-playwright');
 const { ProductCategoriesPage } = require('../../pages/ProductCategoriesPage');
 
 // ---------------------------------------------------------------------------
@@ -17,6 +18,11 @@ const { ProductCategoriesPage } = require('../../pages/ProductCategoriesPage');
 
 test.describe('Product category filtering', () => {
   test.setTimeout(60_000); // extra headroom for API lookups
+
+  test.beforeEach(async () => {
+    await allure.epic('UI Tests');
+    await allure.label('layer', 'ui');
+  });
 
   // ── Hand Tools ─────────────────────────────────────────────────────────────
   test('Hand Tools filter shows only Hand Tools products', async ({ page }) => {

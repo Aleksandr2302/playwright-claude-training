@@ -12,12 +12,16 @@
     "test:webkit": "npx playwright test --project=webkit",
     "test:debug": "npx playwright test --debug",
     "test:ci": "npx playwright test --reporter=dot",
-    "report": "npx playwright show-report"
+    "report": "npx playwright show-report",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:report": "npm run allure:generate && npm run allure:open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.60.0"
+    "@playwright/test": "^1.60.0",
+    "allure-playwright": "^3.9.0"
   }
 }

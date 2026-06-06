@@ -43,6 +43,23 @@ class CheckoutPage {
     await this.stateInput.press('Tab');
   }
 
+  async isHouseNumAndPostCodeFilled(){
+    const houseNumber = this.houseNumberInput;
+    const postalCode = this.postalCodeInput;
+    
+    const houseValue = await houseNumber.inputValue();
+
+    if (!houseValue) {
+      await houseNumber.fill('111');
+    }
+
+    const postalValue = await postalCode.inputValue();
+
+    if (!postalValue) {
+      await postalCode.fill('12345');
+    }
+  }
+
   async proceedFromBilling() {
     // Angular reactive form validation can take a moment to enable the button
     // after all required fields are filled — use a generous timeout.

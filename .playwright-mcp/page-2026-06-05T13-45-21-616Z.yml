@@ -1,0 +1,74 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - text: View the
+    - link "Documentation" [ref=e4] [cursor=pointer]:
+      - /url: https://testsmith-io.github.io/practice-software-testing/#/
+    - text: for this application.
+  - generic [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: Practice Black Box Testing & Bug Hunting
+      - button "Testing Guide" [ref=e9] [cursor=pointer]
+      - button "🐛 Bug Hunting" [ref=e10] [cursor=pointer]
+    - navigation [ref=e11]:
+      - generic [ref=e12]:
+        - link "Practice Software Testing - Toolshop" [ref=e13] [cursor=pointer]:
+          - /url: /
+          - img [ref=e14]
+        - generic [ref=e32]:
+          - menubar "Main menu" [ref=e33]:
+            - menuitem "Home" [ref=e34]:
+              - link "Home" [ref=e35] [cursor=pointer]:
+                - /url: /
+            - menuitem "Categories" [ref=e36]:
+              - button "Categories" [ref=e37] [cursor=pointer]
+            - menuitem "Contact" [ref=e38]:
+              - link "Contact" [ref=e39] [cursor=pointer]:
+                - /url: /contact
+            - menuitem "Sign in" [ref=e40]:
+              - link "Sign in" [ref=e41] [cursor=pointer]:
+                - /url: /auth/login
+          - button "Select language" [ref=e43] [cursor=pointer]:
+            - img [ref=e45]
+            - text: EN
+  - generic [ref=e62]:
+    - heading "Login" [level=3] [ref=e63]
+    - button "Sign in with Google" [ref=e65] [cursor=pointer]
+    - generic "Alternative login methods" [ref=e66]: or use
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - generic [ref=e69]: Email address *
+        - textbox "Email address *" [ref=e70]:
+          - /placeholder: Your email
+          - text: customer@practicesoftwaretesting.com
+      - generic [ref=e71]:
+        - generic [ref=e72]: Password *
+        - generic [ref=e74]:
+          - textbox "Password *" [ref=e75]:
+            - /placeholder: Your password
+            - text: welcome01
+          - button [ref=e77] [cursor=pointer]:
+            - img [ref=e79]
+      - button "Login" [active] [ref=e82] [cursor=pointer]
+    - paragraph [ref=e84]:
+      - text: Not yet an account?
+      - link "Register your account" [ref=e85] [cursor=pointer]:
+        - /url: /auth/register
+      - link "Forgot your Password?" [ref=e86] [cursor=pointer]:
+        - /url: /auth/forgot-password
+    - generic [ref=e88]: Account locked, too many failed attempts. Please contact the administrator.
+  - paragraph [ref=e49]:
+    - text: This is a DEMO application (
+    - link "GitHub repo" [ref=e50] [cursor=pointer]:
+      - /url: https://github.com/testsmith-io/practice-software-testing
+    - text: ), used for software testing training purpose. |
+    - link "Privacy Policy" [ref=e51] [cursor=pointer]:
+      - /url: /privacy
+    - text: "| Banner photo by"
+    - link "Barn Images" [ref=e52] [cursor=pointer]:
+      - /url: https://unsplash.com/@barnimages
+    - text: "on"
+    - link "Unsplash" [ref=e53] [cursor=pointer]:
+      - /url: https://unsplash.com/photos/t5YUoHW6zRo
+    - text: .
+  - button "Open chat" [ref=e55] [cursor=pointer]:
+    - img [ref=e56]

@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { allure } = require('allure-playwright');
 const { HomePage } = require('../../pages/HomePage');
 const { ProductCard } = require('../../pages/components/ProductCard');
 
@@ -6,6 +7,8 @@ test.describe('Product card structure', () => {
   let homePage;
 
   test.beforeEach(async ({ page }) => {
+    await allure.epic('UI Tests');
+    await allure.label('layer', 'ui');
     homePage = new HomePage(page);
     await homePage.navigate();
     await homePage.waitForProductsToLoad();
@@ -76,8 +79,11 @@ test('Show only eco-friendly products filters results correctly', async () => {
     await expect(page.getByTestId('unit-price')).toHaveText(/^\d+(\.\d{1,2})?$/);
 
     await expect(page.getByTestId('product-description')).toBeVisible();
-    // No data-test on <img>; identify it by its alt text (equals product name)
-    await expect(page.getByRole('img', { name: firstCardName })).toBeVisible();
+    // No data-test on <img>; identify it by its alt text (equals product name).
+    // Use toBeAttached rather than toBeVisible: some browsers (WebKit) may not
+    // render AVIF images, giving the element 0 dimensions; the DOM presence is
+    // what matters here.
+    await expect(page.getByRole('img', { name: firstCardName })).toBeAttached();
     await expect(page.getByTestId('quantity')).toBeVisible();
     await expect(page.getByTestId('add-to-cart')).toBeVisible();
     await expect(page.getByTestId('add-to-favorites')).toBeVisible();

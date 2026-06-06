@@ -1,6 +1,13 @@
 const { test, expect } = require('@playwright/test');
+const { allure } = require('allure-playwright');
 
 const BASE_URL = 'https://api.practicesoftwaretesting.com';
+
+// Label every test in this file as an API test for Allure grouping
+test.beforeEach(async () => {
+  await allure.epic('API Tests');
+  await allure.label('layer', 'api');
+});
 
 test('GET /products returns list with items', async ({ request }) => {
   let body;

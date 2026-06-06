@@ -1,9 +1,15 @@
 const { test, expect } = require('@playwright/test');
+const { allure } = require('allure-playwright');
 const { RegistrationPage } = require('../../pages/RegistrationPage');
 const { LoginPage } = require('../../pages/LoginPage');
 const { user, existingUser } = require('../fixtures/auth.fixtures');
 
 test.describe('Auth — registration and login E2E', () => {
+
+  test.beforeEach(async () => {
+    await allure.epic('UI Tests');
+    await allure.label('layer', 'ui');
+  });
 
   test('registers a new user successfully', async ({ page }) => {
     // Arrange

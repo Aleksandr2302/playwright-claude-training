@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { allure } = require('allure-playwright');
 const { LoginPage }             = require('../../pages/LoginPage');
 const { RentalsPage }           = require('../../pages/RentalsPage');
 const { ProductPage }           = require('../../pages/ProductPage');
@@ -43,6 +44,11 @@ async function clearCart(page) {
 // ---------------------------------------------------------------------------
 test.describe('Checkout flow', () => {
   test.setTimeout(90_000);
+
+  test.beforeEach(async () => {
+    await allure.epic('UI Tests');
+    await allure.label('layer', 'ui');
+  });
 
   // ── Rental product checkout (Excavator) ───────────────────────────────────
   //
@@ -97,11 +103,13 @@ test.describe('Checkout flow', () => {
     const checkoutPage = new CheckoutPage(page);
 
     // Step 2 — account (already logged in)
+    
     await checkoutPage.proceedAsLoggedIn();
 
     // Step 3 — billing address
     await expect(checkoutPage.countrySelect).toBeVisible({ timeout: 15000 });
     await checkoutPage.fillBillingAddress(BILLING);
+    await checkoutPage.isHouseNumAndPostCodeFilled();
     await checkoutPage.proceedFromBilling();
 
     // Step 4 — payment method

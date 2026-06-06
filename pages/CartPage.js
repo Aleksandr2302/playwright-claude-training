@@ -47,10 +47,11 @@ class CartPage {
       count = await this.deleteButtons.count();
     }
   }
-
-  async proceedToCheckout() {
+ async proceedToCheckout() {
     await this.proceedButton.click();
   }
+  
+
 }
 
 module.exports = { CartPage };

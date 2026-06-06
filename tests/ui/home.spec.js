@@ -1,10 +1,13 @@
 const { test, expect } = require('@playwright/test');
+const { allure } = require('allure-playwright');
 const { HomePage } = require('../../pages/HomePage');
 
 test.describe('Homepage — initial load', () => {
   let homePage;
 
   test.beforeEach(async ({ page }) => {
+    await allure.epic('UI Tests');
+    await allure.label('layer', 'ui');
     homePage = new HomePage(page);
     await homePage.navigate();
   });
