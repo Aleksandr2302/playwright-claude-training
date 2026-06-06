@@ -35,6 +35,35 @@ Run Playwright tests directly:
 npx playwright test
 ```
 
+## Allure Report (Test Reporting)
+
+-- This project uses Allure for test reporting.
+
+Install Allure command line tool:
+```bash
+npm install -g allure-commandline --save-dev
+```
+
+Run tests with Allure results generation:
+```bash
+-- npx playwright test
+```
+
+Generate Allure report:
+```bash
+-- npx allure generate allure-results --clean -o allure-report
+```
+
+Open Allure report in browser:
+```bash
+-- npx allure open allure-report
+```
+
+OR (recommended shortcut):
+```bash
+-- npx allure serve allure-results
+```
+
 ## Project layout
 
 - `tests/ui` - UI tests and page object related tests
